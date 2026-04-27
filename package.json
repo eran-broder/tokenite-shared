@@ -1,0 +1,61 @@
+{
+  "name": "@tokenite/shared",
+  "version": "1.0.0",
+  "description": "Shared types, schemas, and model catalog for the Tokenite SDK and CLI. Public protocol surface.",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./providers": {
+      "types": "./dist/providers/index.d.ts",
+      "import": "./dist/providers/index.js"
+    },
+    "./catalog": {
+      "types": "./dist/catalog/index.d.ts",
+      "import": "./dist/catalog/index.js"
+    },
+    "./schemas/cli-login": {
+      "types": "./dist/schemas/cli-login.d.ts",
+      "import": "./dist/schemas/cli-login.js"
+    },
+    "./schemas/discovery": {
+      "types": "./dist/schemas/discovery.d.ts",
+      "import": "./dist/schemas/discovery.js"
+    },
+    "./result": {
+      "types": "./dist/result.d.ts",
+      "import": "./dist/result.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "typecheck": "tsc --noEmit",
+    "prepack": "tsc && node -e \"import('node:fs/promises').then(async fs => { const files = await fs.readdir('dist', { recursive: true }); for (const f of files) if (f.endsWith('.map') || f.endsWith('.tsbuildinfo')) await fs.rm('dist/' + f); })\""
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eran-broder/tokenite-shared.git"
+  },
+  "homepage": "https://github.com/eran-broder/tokenite-shared#readme",
+  "bugs": {
+    "url": "https://github.com/eran-broder/tokenite-shared/issues"
+  }
+}
