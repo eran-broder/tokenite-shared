@@ -1,6 +1,6 @@
 {
   "name": "@tokenite/shared",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Shared types, schemas, and model catalog for the Tokenite SDK and CLI. Public protocol surface.",
   "type": "module",
   "exports": {
@@ -47,9 +47,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "dependencies": {
-    "zod": "^4.3.6"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/eran-broder/tokenite-shared.git"
@@ -57,5 +54,8 @@
   "homepage": "https://github.com/eran-broder/tokenite-shared#readme",
   "bugs": {
     "url": "https://github.com/eran-broder/tokenite-shared/issues"
+  },
+  "dependencies": {
+    "zod": "^4.3.6"
   }
 }
